@@ -2,7 +2,7 @@ import React from "react";
 
 function topNav(props) {
   return (
-  <div className="text-red-400 h-14 flex items-center justify-between bg-gray-50 shadow ">
+  <div className="text-red-400 h-16 flex items-center justify-between bg-gray-50 shadow ">
     <div className="flex">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-2 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
