@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import TopNavigation from './components/TopBar';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=' h-screen flex flex-row '>
+      <div class="bg-white w-1/6 h-full shadow">
+
+      </div>
+      <div class="w-5/6 bg-neutral-50 h-full">
+        <TopNavigation name="mariat"/>
+      </div>
     </div>
   );
 }
