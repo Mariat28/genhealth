@@ -61,15 +61,19 @@ function DashboardContent() {
 
         </div>
       </div>
-      <div className="flex h-1/2 shadow-md rounded-sm mt-4 mr-4 p-4 pt-1 items-center">
+      <div className="flex h-1/2 rounded-sm mt-2 mr-4 p-4 pt-1 items-center">
         <div className="w-1/4 bg-white  h-3/4 rounded-sm shadow-md p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">today's appointment (4)</h4>
         </div>
         <div className="w-1/4 bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased"> top treatment</h4>
         </div>
-        <div className="w-1/4 bg-white  h-3/4 ml-4 rounded-sm shadow-md"></div>
-        <div className="w-1/4 bg-white  h-3/4 ml-4 rounded-sm shadow-md"></div>
+        <div className="w-1/4 bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
+        <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total patients this month</h4>
+        </div>
+        <div className="w-1/4 bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
+        <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total income</h4>
+        </div>
       </div>
     </div>
   )
