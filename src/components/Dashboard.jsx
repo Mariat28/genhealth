@@ -4,7 +4,7 @@ import { MdMapsHomeWork, MdPhoneInTalk } from 'react-icons/md';
 
 function DashboardContent() {
   return(
-    <div className="mt-4 ml-4 h-5/6">
+    <div className="mt-4 ml-4 h-full">
       <div className="flex h-1/2">
         <div className="shadow-md w-3/5 rounded-sm dashboardWelcomeCard">
           <div className="flex items-center mt-6 ml-4 font-sans">
@@ -62,8 +62,37 @@ function DashboardContent() {
         </div>
       </div>
       <div className="flex h-1/2 rounded-sm mt-2 mr-4 p-4 pt-1 items-center">
-        <div className="w-1/4 bg-white  h-3/4 rounded-sm shadow-md p-2">
-        <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">today's appointment (4)</h4>
+        <div className="w-1/4 bg-white  h-3/4 ml-4 p-2 rounded-sm shadow-md">
+          <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">today's appointment (4)</h4>
+          <div className="flex items-center mt-5 justify-between">
+            <div className="flex items-center justify-center w-1/4">
+              <p className="text-6xl 2xl:text-8xl text-slate-400">4</p>
+            </div>
+            <div className=" w-3/4 p-2">
+              <div className="rounded-md shadow-sm mt-4 bg-blue-50 flex justify-between p-4 ml-0 items-center">
+                <div className="text-sm">
+                  <p className="text-slate-400">Treatment</p>
+                  <p className="font-bold">Consultation</p>
+                </div>
+                <p className="text-slate-400 ml-4 text-sm">09:00-10:00</p>
+              </div>
+              <div className="rounded-md shadow-sm mt-4 bg-blue-50 flex justify-between p-4 ml-0 items-center">
+                <div className="text-sm">
+                  <p className="text-slate-400">Treatment</p>
+                  <p className="font-bold">Open Access</p>
+                </div>
+                <p className="text-slate-400 ml-4 text-sm">10:00-11:00</p>
+              </div>
+              <div className="rounded-md shadow-sm mt-4 bg-blue-50 flex justify-between p-4 ml-0 items-center">
+                <div className="text-sm">
+                  <p className="text-slate-400">Treatment</p>
+                  <p className="font-bold">Scaling</p>
+                </div>
+                <p className="text-slate-400 ml-4 text-sm">11:00-12:00</p>
+              </div>
+            </div>
+
+          </div>
         </div>
         <div className="w-1/4 bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased"> top treatment</h4>
@@ -72,7 +101,7 @@ function DashboardContent() {
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total patients this month</h4>
         </div>
         <div className="w-1/4 bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
-        <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total income</h4>
+        <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total income </h4>
         </div>
       </div>
     </div>
