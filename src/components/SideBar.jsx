@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link, Switch, Route, Routes } from 'react-router-dom';
 import Logo from '../assets/health-insurance.png';
 import {HiOutlineChat, HiOutlineCalendar, HiOutlineUser, HiOutlineCurrencyDollar } from 'react-icons/hi';
 import { RiListSettingsLine } from 'react-icons/ri'
 import { GoDashboard } from 'react-icons/go';
 import { IoIosInformationCircleOutline, IoIosArrowDown} from 'react-icons/io';
 import { BiUserCircle} from 'react-icons/bi';
+import DashboardContent from './Dashboard';
+import Calendar from  "./CalendarView";
 function SideBar(){
   return(
     <div className="flex  flex-col ">
@@ -22,42 +24,59 @@ function SideBar(){
         <div className="mt-  flex flex-col justify-between h-full">
           <ul>
             <li className="bg-blue-700 text-white pl-0 py-4 text-base">
-              <div className="flex items-center">
-              <GoDashboard className='h-5 w-5 ml-2'/>
-              <p className="pl-4 text-sm">Overview</p>
-              </div>
+              <Link to="/dashboard">
+                <div className="flex items-center">
+                <GoDashboard className='h-5 w-5 ml-2'/>
+                <p className="pl-4 text-sm">Overview</p>
+                </div>
+              </Link>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <div className="flex items-center">
-                  <HiOutlineCalendar className='h-5 w-5 ml-2'/>
-                  <p className="pl-4 text-sm">Calendar</p>
-                </div>
+                <Link to="/calendar">
+                  <div className="flex items-center">
+                    <HiOutlineCalendar className='h-5 w-5 ml-2'/>
+                    <p className="pl-4 text-sm">Calendar</p>
+                  </div>
+                </Link>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <div className="flex items-center">
-                  <HiOutlineUser className='h-5 w-5 ml-2'/>
-                  <p className="pl-4 text-sm">Patient List</p>
-                </div>
+                <Link to="/patients">
+                  <div className="flex items-center">
+                    <HiOutlineUser className='h-5 w-5 ml-2'/>
+                    <p className="pl-4 text-sm">Patient List</p>
+                  </div>
+                </Link>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <div className="flex items-center">
-                <HiOutlineChat className='h-5 w-5 ml-2'/>
-                  <p className="pl-4 text-sm">Messages</p>
-                </div>
+                <Link to="/messages">
+                  <div className="flex items-center">
+                  <HiOutlineChat className='h-5 w-5 ml-2'/>
+                    <p className="pl-4 text-sm">Messages</p>
+                  </div>
+                </Link>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <div className="flex items-center">
-                <HiOutlineCurrencyDollar className='h-5 w-5 ml-2'/>
-                  <p className="pl-4 text-sm">Payment Information</p>
-                </div>
+                <Link to="payments">
+                  <div className="flex items-center">
+                  <HiOutlineCurrencyDollar className='h-5 w-5 ml-2'/>
+                    <p className="pl-4 text-sm">Payment Information</p>
+                  </div>
+                </Link>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <div className="flex items-center">
-                <RiListSettingsLine className='h-5 w-5 ml-2'/>
-                  <p className="pl-4 text-sm">Settings</p>
-                </div>
+                <Link to="/settings">
+                  <div className="flex items-center">
+                  <RiListSettingsLine className='h-5 w-5 ml-2'/>
+                    <p className="pl-4 text-sm">Settings</p>
+                  </div>
+                </Link>
               </li>
           </ul>
+          <Routes>
+            <Route path="/dashboard" element={DashboardContent}></Route>
+            <Route path="/calendar" element={Calendar}></Route>
+          </Routes>
+
           <div className=" mb-10 h-48 divide-y">
             <div className="flex items-center mb-8 ml-2">
               <IoIosInformationCircleOutline/>
