@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/genhealth/static/css/main.ac140df7.css",
-    "main.js": "/genhealth/static/js/main.1b6298c6.js",
+    "main.js": "/genhealth/static/js/main.2368a65f.js",
     "static/media/health-insurance.png": "/genhealth/static/media/health-insurance.6ff921d5f9f9f1629607.png",
     "index.html": "/genhealth/index.html",
     "main.ac140df7.css.map": "/genhealth/static/css/main.ac140df7.css.map",
-    "main.1b6298c6.js.map": "/genhealth/static/js/main.1b6298c6.js.map"
+    "main.2368a65f.js.map": "/genhealth/static/js/main.2368a65f.js.map"
   },
   "entrypoints": [
     "static/css/main.ac140df7.css",
-    "static/js/main.1b6298c6.js"
+    "static/js/main.2368a65f.js"
   ]
 }
