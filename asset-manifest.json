@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ac140df7.css",
+    "main.js": "/static/js/main.8ac4da6b.js",
+    "static/media/health-insurance.png": "/static/media/health-insurance.6ff921d5f9f9f1629607.png",
+    "index.html": "/index.html",
+    "main.ac140df7.css.map": "/static/css/main.ac140df7.css.map",
+    "main.8ac4da6b.js.map": "/static/js/main.8ac4da6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac140df7.css",
+    "static/js/main.8ac4da6b.js"
+  ]
+}
