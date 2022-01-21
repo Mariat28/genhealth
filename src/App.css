@@ -39,3 +39,6 @@
 .dashboardWelcomeCard{
   background-color: #23305d;
 }
+.mainContent{
+  scrollbar-color: gray blue;
+}

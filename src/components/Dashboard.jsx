@@ -4,9 +4,9 @@ import { MdMapsHomeWork, MdPhoneInTalk } from 'react-icons/md';
 
 function DashboardContent() {
   return(
-    <div className="mt-4 ml-4 h-full overflow-scroll">
-      <div className="flex h-1/2">
-        <div className="shadow-md w-3/5 rounded-sm dashboardWelcomeCard">
+    <div className="mt-30 ml-4 w-full bg-blue-50 grid grid-rows-3 gap-2">
+      <div className="grid xl:grid-cols-3 row-span-2 pl-0 pt-0 pr-2">
+        <div className="shadow-xl  xl:col-span-2  rounded-sm dashboardWelcomeCard">
           <div className="flex items-center mt-6 ml-4 font-sans">
             <h2 className="font-bold text-white text-2xl">Good Morning,</h2>
             <p className="text-2xl text-white pl-2 antialiased">Dr Mariat.</p>
@@ -20,24 +20,24 @@ function DashboardContent() {
             </div>
           </div>
         </div>
-        <div className="w-2/5 shadow-md rounded-sm  ml-4 mr-4 grid grid-rows-2   divide-y p-4 ">
+        <div className=" shadow-xl rounded-sm  ml-4 mr-4 grid grid-rows-2   divide-y p-4 ">
           {/* first row stats  */}
-          <div className=" xl:divide-x grid xl:grid-cols-2 grid-cols-1 md:divide-y overflow-auto ">
+          <div className=" xl:divide-x grid xl:grid-cols-2 grid-cols-1 lg:divide-y xl:divide-y-0 overflow-auto ">
               <div className="flex flex-col justify-between ">
                 <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">approval request</h4>
                 <div className="mt-8 mb-8 text-slate-400 flex flex-col">
                   <p className="text-4xl">26</p>
                   <p className="text-sm mt-1">Request Waiting To Approve</p>
                 </div>
-                <div className="flex items-center justify-between w-3/4 2xl:w-1/2 rounded-full bg-blue-50 mb-6 mr-4 p-3">
+                <div className="flex items-center justify-between w-3/4 2xl:w-1/2 rounded-full bg-blue-100 mb-6 mr-4 p-3">
                     <p className="font-bold text-sm">More</p>
                     <IoIosArrowDroprightCircle className="text-blue-700 h-6 w-6" />
                 </div>
               </div>
-              <div className="w-1/2 pl-2 flex flex-col justify-between">
+              <div className="pl-2 flex flex-col justify-between">
                 <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">upcoming appointments</h4>
                   <p className="text-4xl mt-8 mb-8 text-slate-400">14</p>
-                  <div className="flex items-center justify-between w-3/4 2xl:w-1/2 rounded-full bg-blue-50 mb-6 mr-4 p-3">
+                  <div className="flex items-center justify-between w-3/4 2xl:w-1/2 rounded-full bg-blue-100 mb-6 mr-4 p-3">
                     <p className="font-bold text-sm">More</p>
                     <IoIosArrowDroprightCircle className="text-blue-700 h-6 w-6" />
                   </div>
@@ -54,7 +54,7 @@ function DashboardContent() {
               <MdPhoneInTalk/>
               <p className="text-sm ml-2">(+256) 705-976941 - (+256) 705-976941</p>
             </div>
-            <div className="flex items-center justify-between w-1/2 2xl:w-1/5 rounded-full bg-blue-50 mb-4 mr-4 p-3">
+            <div className="flex items-center justify-between w-1/2 2xl:w-1/5 rounded-full bg-blue-100 mb-4 mr-4 p-3">
                 <p className="font-bold text-sm">More</p>
                 <IoIosArrowDroprightCircle className="text-blue-700 h-6 w-6" />
               </div>
@@ -62,11 +62,11 @@ function DashboardContent() {
 
         </div>
       </div>
-      <div className=" h-1/2 rounded-sm mt-2 mr-4 p-4 pt-1 items-center bg-blue-900 grid 2xl:grid-cols-4  grid-cols-1 lg:grid-cols-2">
-        <div className=" bg-red-600 h-3/4 ml-4 p-2 rounded-sm shadow-md">
+      <div className=" rounded-sm mt-2 mr-2 p-4 pl-0 pt-1 items-start  grid 2xl:grid-cols-4  grid-cols-1 lg:grid-cols-2 row-span-1  ">
+        <div className=" bg-white h-full ml-0 p-2 mt-2 rounded-sm shadow-xl">
           <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">today's appointment (4)
           </h4>
-          <div className="flex items-center mt-5 justify-between bg-green-900">
+          <div className="flex items-center mt-5 justify-between ">
             <div className="flex items-center justify-center ">
               <p className="text-6xl 2xl:text-8xl text-slate-400">4</p>
             </div>
@@ -96,13 +96,13 @@ function DashboardContent() {
 
           </div>
         </div>
-        <div className=" bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
+        <div className=" bg-white h-full  ml-4 mt-2 rounded-sm shadow-xl p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased"> top treatment</h4>
         </div>
-        <div className=" bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
+        <div className=" bg-white  h-full ml-4 mt-2  rounded-sm shadow-xl p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total patients this month</h4>
         </div>
-        <div className=" bg-white  h-3/4 ml-4 rounded-sm shadow-md p-2">
+        <div className=" bg-white h-full  ml-4 mt-2  rounded-sm shadow-xl p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total income </h4>
         </div>
       </div>

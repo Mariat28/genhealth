@@ -6,16 +6,17 @@ import './App.css';
 
 function App() {
   return (
-    <div className=' h-full flex flex-col bg-blue-50 '>
-      <div className=' h-full flex flex-row  fixed w-full'>
-        <div className="bg-white w-1/6 2xl:w-60 h-full shadow-2xl">
+    <div className='  flex  bg-blue-50 h-screen
+    '>
+        <div className="bg-white w-60 fixed top-0 bottom-0 h-full shadow-2xl z-10">
            <SideBar/>
         </div>
-        <div className="w-5/6 2xl:w-full bg-blue-50 h-full">
-          <TopNavigation name="mariat" className="absolute"/>
-          <Outlet/>
-        </div>
-      </div>
+        <div className="w-full  bg-blue-50 fixed top-0">
+          <TopNavigation name="mariat" className="fixed top-0"/>
+          </div>
+          <div className='ml-60  w-full overflow-auto overflow-x-hidden mt-20'>
+            <Outlet/>
+          </div>
     </div>
   );
 }
