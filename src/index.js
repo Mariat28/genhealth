@@ -10,18 +10,18 @@ import PatientList from "./components/PatientList";
   const rootElement = document.getElementById('root');
   render(
     <Router>
-    <Routes>
-      <Route path='/login' element={<LoginPage/>}></Route>
-      <Route path="/" element={<App/>}>
-       <Route path="dashboard" element={<DashboardContent/>} ></Route>
-        <Route path="calendar" element={<Calendar/>}></Route>
-        <Route path="patients" element={<PatientList/>}></Route> 
-        <Route path="*" element={
-        <main style={{ padding: "1rem" }}>
-          <p>404!!!! These pages are still under development :)!</p>
-        </main>}/>
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path='/login' element={<LoginPage/>}></Route>
+        <Route path="/" element={<App/>}>
+        <Route path="dashboard" element={<DashboardContent/>} ></Route>
+          <Route path="calendar" element={<Calendar/>}></Route>
+          <Route path="patients" element={<PatientList/>}></Route> 
+          <Route path="*" element={
+          <main style={{ padding: "1rem" }}>
+            <p>404!!!! These pages are still under development :)!</p>
+          </main>}/>
+        </Route>
+      </Routes>
     </Router>,
     rootElement
   );

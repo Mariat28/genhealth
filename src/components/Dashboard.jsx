@@ -99,7 +99,7 @@ function DashboardContent() {
         <div className=" bg-white h-full  ml-4 mt-2 rounded-sm shadow-xl p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased"> top treatment</h4>
         </div>
-        <div className=" bg-white  h-full ml-4 mt-2  rounded-sm shadow-xl p-2">
+        <div className=" bg-white  h-full xl:ml-4 lg:ml-0 ml-0 mt-2  rounded-sm shadow-xl p-2">
         <h4 className="uppercase text-slate-700 text-sm font-bold antialiased">total patients this month</h4>
         </div>
         <div className=" bg-white h-full  ml-4 mt-2  rounded-sm shadow-xl p-2">
