@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Logo from '../assets/health-insurance.png';
 import heroImg from '../assets/login_image.svg';
 class LoginPage extends React.Component {
@@ -15,7 +16,7 @@ class LoginPage extends React.Component {
   }
   render() {
     return(
-      <div className='h-screen  flex justify-center items-center'>
+      <div className='h-screen  flex justify-center items-center bg-blue-50'>
           
         <div className=' lg:h-3/4 h-1/2   shadow-2xl rounded-[30px] overflow-hidden 2xl:w-1/2 w-3/4 grid md:grid-cols-5 '>
           <div className='col-span-2 bg-white h-full p-8 flex flex-col justify-center'>
@@ -27,7 +28,7 @@ class LoginPage extends React.Component {
             <form onSubmit={this.handleLogin}>
               <div className='ml-0 mt-4 text-sm flex flex-col p-4'>
                 <label className='text-sm'>Enter your username/ email address</label>
-                <input type='email' placeholder='mariat@genhealth.com' name='name' className='rounded-sm border focus:border-blue-200 h-10 mt-2 p-1' value={this.state.credentials.username || ''} onChange={this.handleChange} required />
+                <input type='email' placeholder='mariat@genhealth.com' name='name' className='rounded-sm border focus:border-blue-200 h-10 mt-2 p-1' value={this.state.credentials.username || ''} onChange={this.handleChange} required autoComplete='false' />
               </div>
               <div className='ml-0 mt-2 text-sm flex flex-col p-4'>
                 <label className='text-sm'>Enter your password</label>
@@ -55,27 +56,13 @@ class LoginPage extends React.Component {
     );
   };
   handleChange(event){
-    if(event.target.name === 'name') {
       this.setState({
         credentials:{
           ...this.state.credentials,
-          username: event.target.value
+          [event.target.name]: event.target.value
         }
       })
     console.log(event.target.name, event.target.value, this.state.credentials);
-
-    }
-    if(event.target.name === 'password') {
-      this.setState({
-        credentials: {
-          ...this.state.credentials,
-          password: event.target.value
-
-        }
-      })
-    console.log(event.target.name, event.target.value, this.state.credentials);
-
-    }
 
   }
   handleLogin() {
