@@ -10,7 +10,7 @@ import { BiUserCircle} from 'react-icons/bi';
 
 function SideBar(){
   return(
-    <div className="flex  flex-col ">
+    <div className="flex  flex-col shadow-xl">
       {/* logo area  */}
       <div className="flex items-center mt-2">
         <img src={Logo} alt="app-logo" className="w-10"/>

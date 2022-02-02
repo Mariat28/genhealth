@@ -4,7 +4,7 @@ import { IoIosAdd, IoMdNotifications } from 'react-icons/io';
 
 function topNav(props) {
   return (
-  <div className="text-red-400 h-16 flex items-center justify-between bg-gray-50 shadow ">
+  <div className="text-red-400 h-16 flex items-center justify-between bg-white shadow ">
     <div className="flex ml-60 items-center">
       <GoDashboard className="h-5 w-5 mx-2 text-blue-700"/>
       <p className=" text-black mx-1 font-semibold antialiased">Dashboard Overview</p>
