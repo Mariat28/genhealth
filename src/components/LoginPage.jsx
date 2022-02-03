@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../assets/health-insurance.png';
+// import Logo from '../assets/health-insurance.png';
 import heroImg from '../assets/login_image.svg';
 
 function LoginPage() {
