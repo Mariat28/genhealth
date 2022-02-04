@@ -3,6 +3,7 @@ import { HiOutlineUserGroup } from 'react-icons/hi';
 import { MdAttachMoney } from 'react-icons/md';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { RiHeartPulseLine } from 'react-icons/ri';
+import AppointmentListItem from "./AppointmentListItem";
 
 function DashboardContent() {
   return(
@@ -52,6 +53,17 @@ function DashboardContent() {
               <span className="text-4xl text-blue-900 font-semibold">402</span>
             </div>
           </div>
+        </div>
+      </div>
+      {/* upcoming Appointments */}
+      <div className="grid grid-cols-2">
+        <div>
+          <span className="font-semibold text-slate-600">Today's Appointments</span>
+          <AppointmentListItem/>
+        </div>
+        <div>
+          <span className="font-semibold text-slate-600">Next Patient Details</span>
+          {/* <AppointmentListItem/> */}
         </div>
       </div>
 
