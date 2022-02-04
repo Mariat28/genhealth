@@ -12,7 +12,7 @@ function SideBar(){
   return(
     <div className="flex  flex-col shadow-xl">
       {/* logo area  */}
-      <div className="flex items-center mt-2">
+      <div className="flex items-center mt-2 hover:bg-blue-50">
         <img src={Logo} alt="app-logo" className="w-10"/>
         <div className="ml-2">
           <p className="font-bold">GenHealth</p>
@@ -20,10 +20,10 @@ function SideBar(){
         </div>
       </div>
       {/* sidenav links */}
-      <div className="flex flex-col  h-screen mt-4 justify-between">
+      <div className="flex flex-col  shadow-2xl h-screen mt-4 justify-between">
         <div className="mt-  flex flex-col justify-between h-full">
           <ul>
-            <li className="bg-blue-700 text-white pl-0 py-4 text-base">
+            <li className="bg-blue-900 text-white pl-0 py-4 text-base">
               <Link to="dashboard">
                 <div className="flex items-center">
                 <GoDashboard className='h-5 w-5 ml-2'/>

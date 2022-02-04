@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='  flex  bg-blue-50 h-screen
     '>
-        <div className="bg-white w-60 fixed top-0 bottom-0 h-full shadow-2xl z-10">
+        <div className="bg-blue-50 w-60 fixed top-0 bottom-0 h-full  z-10">
            <SideBar/>
         </div>
         <div className="w-full fixed top-0">
