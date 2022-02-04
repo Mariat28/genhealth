@@ -13,7 +13,7 @@ function SideBar(){
     <div className="flex  flex-col shadow-xl">
       {/* logo area  */}
       <div className="flex items-center mt-2 hover:bg-blue-50">
-        <img src={Logo} alt="app-logo" className="w-10"/>
+        <img src={Logo} alt="app-logo" className="w-10 App-logo"/>
         <div className="ml-2">
           <p className="font-bold">GenHealth</p>
           <p className="font-thin text-xs font-serif text-gray-500">Simplifying e-Health</p>

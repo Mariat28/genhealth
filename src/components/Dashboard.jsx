@@ -7,7 +7,7 @@ import AppointmentListItem from "./AppointmentListItem";
 
 function DashboardContent() {
   return(
-    <div className="mt-30 ml-4 w-full  grid grid-rows-3 gap-2">
+    <div className="mt-30 ml-4 w-full  grid grid-rows-3 gap-2 mainContent">
       {/* metrics row  */}
       <div className="grid grid-cols-4">
         <div className="rounded shadow bg-white h-36  flex justify-start  mr-3">
