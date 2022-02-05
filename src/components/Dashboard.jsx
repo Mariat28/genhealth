@@ -4,13 +4,13 @@ import { MdAttachMoney } from 'react-icons/md';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { RiHeartPulseLine } from 'react-icons/ri';
 import AppointmentListItem from "./AppointmentListItem";
-
+import NextPatient from "./NextPatientItem";
 function DashboardContent() {
   return(
-    <div className="mt-30 ml-4 w-full  grid grid-rows-3 gap-2 mainContent">
+    <div className="mt-30 ml-4 w-full  mainContent">
       {/* metrics row  */}
-      <div className="grid grid-cols-4">
-        <div className="rounded shadow bg-white h-36  flex justify-start  mr-3">
+      <div className="grid lg:grid-cols-4 grid-cols-1  h-fit">
+        <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0 mr-8 lg:mr-3">
           <div className="flex justify-center  items-center ml-6">
             <div className=" flex justify-center items-center  bg-blue-50 p-2 h-10 w-10 rounded-lg">
               <HiOutlineUserGroup className="w-8 h-8 font-bold text-purple-500" />
@@ -21,7 +21,7 @@ function DashboardContent() {
             </div>
           </div>
         </div>
-        <div className="rounded shadow bg-white h-36  flex justify-start  mr-3">
+        <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0  mr-8 lg:mr-3">
           <div className="flex justify-center  items-center ml-6">
             <div className=" flex justify-center items-center  bg-blue-50 p-2 h-10 w-10 rounded-lg">
               <MdAttachMoney className="text-red-500 w-8 h-8 font-bold " />
@@ -32,7 +32,7 @@ function DashboardContent() {
             </div>
           </div>
         </div>
-        <div className="rounded shadow bg-white h-36  flex justify-start  mr-3">
+        <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0  mr-8 lg:mr-3">
           <div className="flex justify-center  items-center ml-6">
             <div className=" flex justify-center items-center  bg-blue-50 p-2 h-10 w-10 rounded-lg">
               <AiOutlineCalendar className="text-green-600 w-8 h-8 font-bold " />
@@ -43,7 +43,7 @@ function DashboardContent() {
             </div>
           </div>
         </div>
-        <div className="rounded shadow bg-white h-36  flex justify-start  mr-8">
+        <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0 mr-8 lg:mr-6">
           <div className="flex justify-center  items-center ml-6">
             <div className=" flex justify-center items-center  bg-blue-50 p-2 h-10 w-10 rounded-lg">
               <RiHeartPulseLine className="text-pink-500 w-8 h-8 font-bold " />
@@ -56,14 +56,14 @@ function DashboardContent() {
         </div>
       </div>
       {/* upcoming Appointments */}
-      <div className="grid grid-cols-2">
-        <div>
+      <div className="grid grid-cols-2 mt-3">
+        <div className="mr-3">
           <span className="font-semibold text-slate-600">Today's Appointments</span>
           <AppointmentListItem/>
         </div>
-        <div>
+        <div className="ml-1">
           <span className="font-semibold text-slate-600">Next Patient Details</span>
-          {/* <AppointmentListItem/> */}
+          <NextPatient/>
         </div>
       </div>
 
