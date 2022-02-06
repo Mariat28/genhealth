@@ -5,6 +5,7 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 import { RiHeartPulseLine } from 'react-icons/ri';
 import AppointmentListItem from "./AppointmentListItem";
 import NextPatient from "./NextPatientItem";
+import AppointmentRequest from "./AppointmentRequests";
 function DashboardContent() {
   return(
     <div className="mt-30 ml-4 w-full  mainContent">
@@ -56,14 +57,29 @@ function DashboardContent() {
         </div>
       </div>
       {/* upcoming Appointments */}
-      <div className="grid grid-cols-2 mt-3">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-3">
         <div className="mr-3">
-          <span className="font-semibold text-slate-600">Today's Appointments</span>
+          <span className="font-semibold text-slate-600 ">Today's Appointments</span>
           <AppointmentListItem/>
         </div>
-        <div className="ml-1">
+        <div className="ml-1 mr-3 lg:mr-0">
           <span className="font-semibold text-slate-600">Next Patient Details</span>
           <NextPatient/>
+        </div>
+      </div>
+      {/* appointment requests  */}
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-3">
+        <div>
+          <div className="flex justify-between mr-3">
+            <span className="font-semibold text-slate-600 ">Appointments Requests</span>
+            <span className="font-semibold text-blue-400 cursor-pointer text-sm">See All</span>
+          </div>
+          <AppointmentRequest/>
+        </div>
+        
+        <div className="ml-1 mr-3 lg:mr-0">
+          <span className="font-semibold text-slate-600">Monthly Statistics</span>
+          <AppointmentRequest/>
         </div>
       </div>
 
