@@ -6,9 +6,10 @@ import { RiHeartPulseLine } from 'react-icons/ri';
 import AppointmentListItem from "./AppointmentListItem";
 import NextPatient from "./NextPatientItem";
 import AppointmentRequest from "./AppointmentRequests";
+import MonthlyStatistics from "./MonthlyStatistics";
 function DashboardContent() {
   return(
-    <div className="mt-30 ml-4 w-full  mainContent">
+    <div className=" ml-4 w-full  mainContent">
       {/* metrics row  */}
       <div className="grid lg:grid-cols-4 grid-cols-1  h-fit">
         <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0 mr-8 lg:mr-3">
@@ -63,7 +64,7 @@ function DashboardContent() {
           <AppointmentListItem/>
         </div>
         <div className="ml-1 mr-3 lg:mr-0">
-          <span className="font-semibold text-slate-600">Next Patient Details</span>
+          <span className="font-semibold text-slate-600">Current Patient Details</span>
           <NextPatient/>
         </div>
       </div>
@@ -79,7 +80,7 @@ function DashboardContent() {
         
         <div className="ml-1 mr-3 lg:mr-0">
           <span className="font-semibold text-slate-600">Monthly Statistics</span>
-          <AppointmentRequest/>
+          <MonthlyStatistics/>
         </div>
       </div>
 
