@@ -11,7 +11,7 @@ function DashboardContent() {
   return(
     <div className=" ml-4 w-full  mainContent">
       {/* metrics row  */}
-      <div className="grid lg:grid-cols-4 grid-cols-1  h-fit">
+      <div className="grid lg:grid-cols-4 grid-cols-1  h-fit mr-3">
         <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0 mr-8 lg:mr-3">
           <div className="flex justify-center  items-center ml-6">
             <div className=" flex justify-center items-center  bg-blue-50 p-2 h-10 w-10 rounded-lg">
@@ -19,7 +19,7 @@ function DashboardContent() {
             </div>
             <div className="flex flex-col justify-center ml-3">
               <span className="font-semibold text-slate-600">Patients</span>
-              <span className="text-4xl text-blue-900 font-semibold">600</span>
+              <span className="text-4xl text-blue-900 font-semibold lg:text-3xl">600</span>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@ function DashboardContent() {
             </div>
             <div className="flex flex-col justify-center ml-3">
               <span className="font-semibold text-slate-700">Income</span>
-              <span className="text-4xl text-blue-900 font-semibold">12,500</span>
+              <span className="text-4xl text-blue-900 font-semibold lg:text-3xl">12,500</span>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ function DashboardContent() {
             </div>
             <div className="flex flex-col justify-center ml-3">
               <span className="font-semibold text-slate-600">Appointments</span>
-              <span className="text-4xl text-blue-900 font-semibold">211</span>
+              <span className="text-4xl text-blue-900 font-semibold lg:text-3xl">211</span>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ function DashboardContent() {
             </div>
             <div className="flex flex-col justify-center ml-3">
               <span className=" text-slate-600 font-semibold">Treatments</span>
-              <span className="text-4xl text-blue-900 font-semibold">402</span>
+              <span className="text-4xl text-blue-900 font-semibold lg:text-3xl">402</span>
             </div>
           </div>
         </div>
@@ -60,11 +60,11 @@ function DashboardContent() {
       {/* upcoming Appointments */}
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-3">
         <div className="mr-3">
-          <span className="font-semibold text-slate-600 ">Today's Appointments</span>
+          <span className="font-semibold text-slate-600 lg:text-sm ">Today's Appointments</span>
           <AppointmentListItem/>
         </div>
         <div className="ml-1 mr-3 lg:mr-0">
-          <span className="font-semibold text-slate-600">Current Patient Details</span>
+          <span className="font-semibold text-slate-600 lg:text-sm">Current Patient Details</span>
           <NextPatient/>
         </div>
       </div>
@@ -72,14 +72,14 @@ function DashboardContent() {
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-3">
         <div>
           <div className="flex justify-between mr-3">
-            <span className="font-semibold text-slate-600 ">Appointments Requests</span>
+            <span className="font-semibold text-slate-600 lg:text-sm">Appointments Requests</span>
             <span className="font-semibold text-blue-400 cursor-pointer text-sm">See All</span>
           </div>
           <AppointmentRequest/>
         </div>
         
         <div className="ml-1 mr-3 lg:mr-0">
-          <span className="font-semibold text-slate-600">Monthly Statistics</span>
+          <span className="font-semibold text-slate-600 lg:text-sm">Monthly Statistics</span>
           <MonthlyStatistics/>
         </div>
       </div>
