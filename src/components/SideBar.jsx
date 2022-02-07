@@ -1,5 +1,5 @@
 import React from "react";
-import {  Link} from 'react-router-dom';
+import {  NavLink} from 'react-router-dom';
 import Logo from '../assets/health-insurance.png';
 import {HiOutlineChat, HiOutlineCalendar, HiOutlineUser, HiOutlineCurrencyDollar } from 'react-icons/hi';
 import { RiListSettingsLine } from 'react-icons/ri'
@@ -19,57 +19,57 @@ function SideBar(){
           <p className="font-thin text-xs font-serif text-gray-500">Simplifying e-Health</p>
         </div>
       </div>
-      {/* sidenav links */}
+      {/* sidenav NavLinks */}
       <div className="flex flex-col  shadow-2xl h-screen mt-4 justify-between">
         <div className="mt-  flex flex-col justify-between h-full">
           <ul>
-            <li className="bg-blue-900 text-white pl-0 py-4 text-base">
-              <Link to="dashboard">
+            <li className=" pl-0 py-4 text-base">
+              <NavLink to="dashboard" className={({ isActive }) => isActive ?"bg-blue-900 text-blue-900" : 'text-black'}>
                 <div className="flex items-center">
                 <GoDashboard className='h-5 w-5 ml-2'/>
                 <p className="pl-4 text-sm">Overview</p>
                 </div>
-              </Link>
+              </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <Link to="calendar">
+                <NavLink to="calendar">
                   <div className="flex items-center">
                     <HiOutlineCalendar className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Calendar</p>
                   </div>
-                </Link>
+                </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <Link to="/patients">
+                <NavLink to="/patients">
                   <div className="flex items-center">
                     <HiOutlineUser className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Patient List</p>
                   </div>
-                </Link>
+                </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <Link to="/messages">
+                <NavLink to="/messages">
                   <div className="flex items-center">
                   <HiOutlineChat className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Messages</p>
                   </div>
-                </Link>
+                </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <Link to="/payments">
+                <NavLink to="/payments">
                   <div className="flex items-center">
                   <HiOutlineCurrencyDollar className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Payment Information</p>
                   </div>
-                </Link>
+                </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <Link to="/settings">
+                <NavLink to="/settings">
                   <div className="flex items-center">
                   <RiListSettingsLine className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Settings</p>
                   </div>
-                </Link>
+                </NavLink>
               </li>
           </ul>
 

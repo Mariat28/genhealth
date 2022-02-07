@@ -79,7 +79,7 @@ function DashboardContent() {
         </div>
         
         <div className="ml-1 mr-3 lg:mr-0">
-          <span className="font-semibold text-slate-600 lg:text-sm">Monthly Statistics</span>
+          <span className="font-semibold text-slate-600 lg:text-sm">Performance Statistics</span>
           <MonthlyStatistics/>
         </div>
       </div>
