@@ -12,7 +12,7 @@ function NextPatient() {
                     {/* avatar div  */}
                 </div>
                 <div className="flex flex-col ml-2">
-                    <span className="text-blue-900 font-semibold">Mariat Ndagire</span>
+                    <span className="text-blue-900 font-semibold">Robert Kiyosaki</span>
                     <span className="text-slate-500 text-sm">Plot 65 Kampala Road,</span>
                     <span className="text-slate-500 text-sm">Kampala, Uganda</span>
                 </div>
