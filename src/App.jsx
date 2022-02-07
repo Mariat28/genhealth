@@ -14,7 +14,7 @@ function App() {
         <div className="w-full fixed top-0">
           <TopNavigation name="mariat" className="fixed top-0 "/>
         </div>
-          <div className='ml-60  w-full overflow-auto overflow-x-hidden mt-20 '>
+          <div className='ml-60  w-full overflow-auto overflow-x-hidden mt-20 mainContent '>
             <Outlet/>
           </div>
     </div>

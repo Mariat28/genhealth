@@ -7,6 +7,7 @@ import AppointmentListItem from "./AppointmentListItem";
 import NextPatient from "./NextPatientItem";
 import AppointmentRequest from "./AppointmentRequests";
 import MonthlyStatistics from "./MonthlyStatistics";
+import '../../App.css';
 function DashboardContent() {
   return(
     <div className=" ml-4 w-full  mainContent">
