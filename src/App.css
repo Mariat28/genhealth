@@ -36,6 +36,16 @@
 .dashboardWelcomeCard{
   background-color: #23305d;
 }
-.mainContent{
-  scrollbar-color: gray blue;
+.mainContent::-webkit-scrollbar {
+  width: 8px;
+
+}
+.mainContent::-webkit-scrollbar-track {
+  border-radius:8px;
+
+}
+.mainContent::-webkit-scrollbar-thumb {
+  background: #90CAF9;
+  padding:5px;
+  border-radius:8px;
 }

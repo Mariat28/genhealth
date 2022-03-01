@@ -7,6 +7,7 @@ import AppointmentListItem from "./AppointmentListItem";
 import NextPatient from "./NextPatientItem";
 import AppointmentRequest from "./AppointmentRequests";
 import MonthlyStatistics from "./MonthlyStatistics";
+import '../../App.css';
 function DashboardContent() {
   return(
     <div className=" ml-4 w-full  mainContent">
@@ -79,7 +80,7 @@ function DashboardContent() {
         </div>
         
         <div className="ml-1 mr-3 lg:mr-0">
-          <span className="font-semibold text-slate-600 lg:text-sm">Monthly Statistics</span>
+          <span className="font-semibold text-slate-600 lg:text-sm">Performance Statistics</span>
           <MonthlyStatistics/>
         </div>
       </div>

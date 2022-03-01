@@ -22,8 +22,8 @@ function AppointmentRequest() {
                         </div>
                     </div>
                     <div className="mr-4 flex">
-                        <div className="rounded-full h-10 w-10 lg:h-8 lg:w-8 border-blue-400 border flex justify-center items-center animate-pulse hover:animate-bounce"><AiOutlineCheck className='text-blue-400 text-lg '/></div>
-                        <div className="rounded-full h-10 w-10 lg:h-8 lg:w-8  border-red-400 border flex justify-center items-center ml-2 hover:animate-bounce "><AiOutlineClose className='text-red-400 text-lg'/></div>
+                        <div className="rounded-full h-10 w-10 lg:h-8 lg:w-8 border-blue-400 border flex justify-center items-center animate-pulse "><AiOutlineCheck className='text-blue-400 text-lg '/></div>
+                        <div className="rounded-full h-10 w-10 lg:h-8 lg:w-8  border-red-400 border flex justify-center items-center ml-2"><AiOutlineClose className='text-red-400 text-lg'/></div>
                     </div>
                 </div>
                 <div className="flex justify-between items-center mt-3  p-3 rounded mr-3 shadow-sm cursor-pointer">
