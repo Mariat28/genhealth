@@ -12,7 +12,7 @@ function AppointmentRequest() {
                             {/* avatar div  */}
                         </div>
                         <div className="flex flex-col ml-2">
-                            <span className="text-blue-900 font-semibold">Mariat Ndagire</span>
+                            <span className="text-blue-900 font-semibold">Robert Kiyosaki</span>
                             <span className="text-sm  text-slate-600">Venners</span>
                             <div className="flex items-center">
                                 <span className="text-sm font text-blue-900">26th February</span>

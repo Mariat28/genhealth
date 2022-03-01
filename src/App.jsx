@@ -1,12 +1,13 @@
 import TopNavigation from './components/TopBar';
 import SideBar from './components/SideBar';
+import Footer from './components/Footer';
 // import DashboardContent from './components/Dashboard';
 import { Outlet } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className='  flex  bg-blue-50 h-screen
+    <div className='  flex   bg-blue-50 h-screen 
     '>
         <div className="bg-blue-50 w-60 fixed top-0 bottom-0 h-full  z-10">
            <SideBar className="lg:visible"/>
@@ -16,6 +17,9 @@ function App() {
         </div>
           <div className='ml-60  w-full overflow-auto overflow-x-hidden mt-20 '>
             <Outlet/>
+            <div>
+            <Footer className="fixed bottom-0 mr-6"/>
+          </div>
           </div>
     </div>
   );
