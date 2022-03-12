@@ -4,9 +4,9 @@ import womanProfile from '../../assets/woman.jpg';
 function AppointmentRequest() {
     return(
         <div>
-            <div className="bg-white p-2 mt-3 max-h-full  min-h-[400px] overflow-auto lg:mr-3 mr-6">
-                <div className="flex justify-between items-center mt-3  p-3 rounded mr-3 shadow-sm cursor-pointer">
-                    <div className="flex items-center">
+            <div className="bg-white p-2 mt-3 max-h-full overflow-x-hidden  min-h-full  overflow-auto lg:mr-0 ">
+                <div className="flex justify-between items-center mt-3 w-full p-3 rounded mr-3 shadow-sm cursor-pointer hover:shadow-md">
+                    <div className="flex items-start">
                         <div className="h-10 w-10 rounded-full overflow-hidden">
                             <img src={profileImg} alt="profilepic" className='object-contain'/>
                             {/* avatar div  */}
@@ -26,8 +26,8 @@ function AppointmentRequest() {
                         <div className="rounded-full h-10 w-10 lg:h-8 lg:w-8  border-red-400 border flex justify-center items-center ml-2"><AiOutlineClose className='text-red-400 text-lg'/></div>
                     </div>
                 </div>
-                <div className="flex justify-between items-center mt-3  p-3 rounded mr-3 shadow-sm cursor-pointer">
-                    <div className="flex items-center">
+                <div className="flex justify-between items-center mt-3 w-full  p-3 rounded mr-3 shadow-sm cursor-pointer hover:shadow-md">
+                    <div className="flex items-start">
                         <div className=" h-10 w-10 rounded-full overflow-hidden">
                             <img src={womanProfile} alt="profilepic" className='object-contain'/>
                             {/* avatar div  */}

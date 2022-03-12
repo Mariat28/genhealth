@@ -6,7 +6,7 @@ function NextPatient() {
     return (
         <div className="bg-white p-4 mt-3 max-h-full  min-h-[400px] overflow-auto mr-6 lg:mr-10">
             {/* profile picture */}
-            <div className="flex items-center">
+            <div className="flex items-start">
                 <div className="bg-red-500 h-10 w-10 rounded-full overflow-hidden">
                     <img src={womanProfile} alt="profilepic" className='object-contain'/>
                     {/* avatar div  */}

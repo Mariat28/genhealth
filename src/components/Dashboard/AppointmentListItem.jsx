@@ -5,7 +5,7 @@ function AppointmentListItem() {
     return(
         <>
         <div className="bg-white p-2 mt-3 max-h-full  min-h-[400px] overflow-auto lg:mr-0 mr-6">
-            <div className="flex justify-between mt-3 bg-blue-50 p-3 rounded mr-3 shadow-sm cursor-pointer">
+            <div className="flex justify-between mt-3 bg-blue-50 p-3 rounded mr-3 shadow-sm cursor-pointer hover:shadow">
                 <div className="flex">
                     <div className=" h-10 w-10 rounded-full overflow-hidden">
                         <img src={profileImg} alt="profilepic" className='object-contain'/>
@@ -20,7 +20,7 @@ function AppointmentListItem() {
                     <span className="text-blue-400 font-semibold">OnGoing</span>
                 </div>
             </div>
-            <div className="flex justify-between mt-3 bg-white p-3 rounded mr-3">
+            <div className="flex justify-between mt-3 bg-white p-3 rounded mr-3 shadow-sm cursor-pointer hover:shadow">
                     <div className="flex">
                         <div className=" h-10 w-10 rounded-full overflow-hidden">
                         <img src={womanProfile} alt="profilepic" className='object-contain'/>

@@ -23,8 +23,8 @@ function SideBar(){
       <div className="flex flex-col  shadow-2xl h-screen mt-4 justify-between">
         <div className="mt-  flex flex-col justify-between h-full">
           <ul>
-            <li className=" pl-0 py-4 text-base">
-              <NavLink to="dashboard" className={({ isActive }) => isActive ?"bg-blue-900 text-blue-900" : 'text-black'}>
+            <li className=" pl-0 py-4 text-base" >
+              <NavLink to="dashboard" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                 <div className="flex items-center">
                 <GoDashboard className='h-5 w-5 ml-2'/>
                 <p className="pl-4 text-sm">Overview</p>
