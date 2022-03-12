@@ -7,6 +7,7 @@ import heroImg from '../assets/login_image.svg';
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [usernameError, setUserNameError] = useState('');
   const [loggedIn, setLoggedIn] = useState(true);
   let navigate = useNavigate();
 
@@ -23,7 +24,9 @@ function LoginPage() {
   }
 
   function handleLogin() {
-    if(username && password) {
+    if(!username || !password || username!=='mariat@gmail.com') {
+      setUserNameError('Enter correct username to proceed');
+    } else{
       navigate('/dashboard', { replace: true });
     }
 
@@ -43,6 +46,7 @@ function LoginPage() {
               <label className='text-sm'>Enter your username/ email address</label>
               <input type='email' placeholder='mariat@genhealth.com' name='name' className='rounded-sm border  h-10 mt-2 p-1' value={username || ''} onChange={handleNameChange} required autoComplete='false' />
             </div>
+            <small className='text-red-600'>{usernameError}</small>
             <div className='ml-0 mt-2 text-sm flex flex-col p-4'>
               <label className='text-sm'>Enter your password</label>
               <input type='password' placeholder='atleast 8 characters' name=' password' className='rounded-sm border  h-10 mt-2 p-1 form-control' value={password || ''} required   onChange={handlePasswordChange}/>

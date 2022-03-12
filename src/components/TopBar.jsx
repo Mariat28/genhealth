@@ -1,12 +1,13 @@
 import React from "react";
-import { GoDashboard } from 'react-icons/go';
+import { GoDashboard, GoThreeBars } from 'react-icons/go';
 import { IoIosAdd, IoMdNotifications } from 'react-icons/io';
 
 function topNav(props) {
   return (
   <div className=" h-16 flex items-center justify-between bg-blue-50 shadow ">
     <div className="flex ml-60 items-center">
-      <GoDashboard className="h-5 w-5 mx-2 text-blue-700"/>
+      <GoDashboard className="h-5 w-5 mx-2 text-blue-700 hidden lg:block"/>
+      <GoThreeBars className="h-5 w-5 mx-2 text-blue-900 lg:hidden" />
       <p className=" text-black mx-1 font-semibold antialiased">Dashboard Overview</p>
     </div>
     <div className="flex items-center mr-3">
