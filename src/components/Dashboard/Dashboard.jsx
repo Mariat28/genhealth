@@ -11,7 +11,7 @@ import CardComponent from "./CardComponent";
 import '../../App.css';
 function DashboardContent() {
   return(
-    <div className=" ml-4 w-full  mainContent">
+    <div className=" ml-4  w-full  mainContent">
       {/* metrics row  */}
       <div className="grid lg:grid-cols-4 grid-cols-1  h-fit mr-3">
         <CardComponent icon={<HiOutlineUserGroup className="w-8 h-8 font-bold text-purple-500"></HiOutlineUserGroup>} title="Patients" statistic="600"></CardComponent>

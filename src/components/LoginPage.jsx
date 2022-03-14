@@ -7,7 +7,8 @@ import heroImg from '../assets/login_image.svg';
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [usernameError, setUserNameError] = useState('');
+  const [usernameError, setUsernameError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
   const [loggedIn, setLoggedIn] = useState(true);
   let navigate = useNavigate();
 
@@ -23,9 +24,12 @@ function LoginPage() {
     setLoggedIn(event.target.checked);
   }
 
-  function handleLogin() {
+  function handleLogin(event) {
+    event.preventDefault();
     if(!username || !password || username!=='mariat@gmail.com') {
-      setUserNameError('Enter correct username to proceed');
+      setUsernameError('Enter correct username to proceed');
+    } else if(password && password !== 'mariat123'){
+      setPasswordError('Enter correct password to proceed')
     } else{
       navigate('/dashboard', { replace: true });
     }
@@ -45,14 +49,15 @@ function LoginPage() {
             <div className='ml-0 mt-4 text-sm flex flex-col p-4'>
               <label className='text-sm'>Enter your username/ email address</label>
               <input type='email' placeholder='mariat@genhealth.com' name='name' className='rounded-sm border  h-10 mt-2 p-1' value={username || ''} onChange={handleNameChange} required autoComplete='false' />
+              <small className='text-red-600'>{usernameError}</small>
             </div>
-            <small className='text-red-600'>{usernameError}</small>
             <div className='ml-0 mt-2 text-sm flex flex-col p-4'>
               <label className='text-sm'>Enter your password</label>
               <input type='password' placeholder='atleast 8 characters' name=' password' className='rounded-sm border  h-10 mt-2 p-1 form-control' value={password || ''} required   onChange={handlePasswordChange}/>
+              <small className='text-red-600'>{passwordError}</small>
             </div>
             <div className='p-4 flex flex-col items-start'>
-              <button type='submit' className='bg-blue-800 p-2 rounded-md w-full text-white text-center block hover:bg-blue-700'>Log in</button>
+              <button type='submit' className='bg-blue-800 p-2 rounded-md w-full text-white text-center block hover:bg-blue-700' onSubmit={handleLogin}>Log in</button>
               <div className='flex items-center mt-2'>
                 <input type='checkbox' checked={loggedIn} onChange={handleRememberMe}/>
                 <p className='text-slate-500 text-sm ml-2'>Remember me on this computer</p>
@@ -63,7 +68,7 @@ function LoginPage() {
               </div>
           </form>
         </div>
-        <div className='col-span-3 bg-blue-100  h-full flex items-center flex-col justify-center '>
+        <div className='col-span-3 bg-blue-100  h-full md:flex items-center flex-col justify-center hidden'>
           {/* <p className='txet-slate-700 text-lg mb-4'>Nice to see you again </p> */}
           <p className='text-3xl text-blue-800 mb-10 font-semibold'>Welcome back!</p>
           <img src={heroImg} alt="app-logo" className='h-80 w-100'/>
