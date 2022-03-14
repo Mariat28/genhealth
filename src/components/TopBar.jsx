@@ -17,7 +17,7 @@ function topNav(props) {
     <div className=" md:flex items-center justify-between w-full lg:ml-20 ml-4  hidden">
       <div className="flex items-center">
         <GoDashboard className="h-5 w-5 mx-2 text-blue-700 hidden lg:block"/>
-        <GoThreeBars className="h-5 w-5 mx-2 text-blue-900 lg:hidden" />
+        {/* <GoThreeBars className="h-5 w-5 mx-2 text-blue-900 lg:hidden" /> */}
         <p className=" text-black mx-1 font-semibold antialiased">Dashboard Overview</p>
       </div>
       <div className="flex items-center mr-3">
