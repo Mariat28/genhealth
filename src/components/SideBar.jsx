@@ -9,12 +9,12 @@ import { BiUserCircle} from 'react-icons/bi';
 
 function SideBar(){
   return(
-    <div className="lg:flex mt-16 flex-col shadow-xl">
+    <div className="lg:flex mt-14  flex-col shadow-xl">
       {/* sidenav NavLinks */}
       <div className="flex flex-col  shadow-2xl h-screen mt-4 justify-between">
         <div className="mt-  flex flex-col justify-between h-full">
           <ul>
-            <li className=" pl-0 py-4 text-base" >
+            <li className=" pl-0 py-4 text-base " >
               <NavLink to="dashboard" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                 <div className="flex items-center ">
                 <GoDashboard className='h-5 w-5 ml-2'/>

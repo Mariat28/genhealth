@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
       <div className='  flex   bg-blue-50 h-screen'>
-          <div className="bg-blue-50 lg:w-60 w-14 fixed top-0 bottom-0 h-full hidden md:block  z-10">
+          <div className=" lg:w-60 w-14 fixed top-0 bottom-0 h-full hidden md:block  z-10">
             <SideBar/>
           </div>
           <div className="w-full fixed top-0 z-20">
