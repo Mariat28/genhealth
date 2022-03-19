@@ -10,7 +10,7 @@ import { BiUserCircle} from 'react-icons/bi';
 
 function SideBar(){
   return(
-    <div className="flex  flex-col shadow-xl">
+    <div className="flex  flex-col shadow-xl bg-white">
       {/* logo area  */}
       <div className="flex items-center mt-2 hover:bg-blue-50">
         <img src={Logo} alt="app-logo" className="w-10 App-logo"/>
@@ -32,7 +32,7 @@ function SideBar(){
               </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="calendar">
+                <NavLink to="calendar" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                     <HiOutlineCalendar className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Calendar</p>
@@ -40,7 +40,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/patients">
+                <NavLink to="/patients" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                     <HiOutlineUser className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Patient List</p>
@@ -48,7 +48,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/messages">
+                <NavLink to="/messages" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                   <HiOutlineChat className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Messages</p>
@@ -56,7 +56,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/payments">
+                <NavLink to="/payments" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                   <HiOutlineCurrencyDollar className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Payment Information</p>
@@ -64,7 +64,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/settings">
+                <NavLink to="/settings" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                   <RiListSettingsLine className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm">Settings</p>

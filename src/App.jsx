@@ -16,9 +16,9 @@ function App() {
           </div>
             <div className='ml-60  w-full overflow-auto overflow-x-hidden mt-20 mainContent relative'>
               <Outlet/>
-              <div className='relative h-20 items-end flex justify-center bg-blue-50 shadow '>
+              {/* <div className=' h-20 items-end flex justify-center bg-blue-50 shadow '>
               <Footer className="absolute bottom-0 mr-6 "/>
-                </div>
+              </div> */}
             </div>
       </div>
   );

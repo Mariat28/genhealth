@@ -63,7 +63,7 @@ function LoginPage() {
               </div>
           </form>
         </div>
-        <div className='col-span-3 bg-blue-100  h-full flex items-center flex-col justify-center '>
+        <div className='col-span-3 bg-blue-100  h-full  items-center flex-col justify-center md:flex hidden'>
           {/* <p className='txet-slate-700 text-lg mb-4'>Nice to see you again </p> */}
           <p className='text-3xl text-blue-800 mb-10 font-semibold'>Welcome back!</p>
           <img src={heroImg} alt="app-logo" className='h-80 w-100'/>
