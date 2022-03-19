@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation} from "react-router-dom";
-import { GoDashboard, GoThreeBars, GoCalendar } from 'react-icons/go';
+import {GoThreeBars } from 'react-icons/go';
 import { IoIosAdd, IoMdNotifications } from 'react-icons/io';
 import {ImEnvelop, ImCalendar} from 'react-icons/im';
 import {HiOutlineCurrencyDollar} from 'react-icons/hi';
