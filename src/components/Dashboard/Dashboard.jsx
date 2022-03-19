@@ -13,31 +13,31 @@ function DashboardContent() {
   return(
     <div className=" ml-4  w-full  mainContent">
       {/* metrics row  */}
-      <div className="grid lg:grid-cols-4 grid-cols-1  h-fit mr-3">
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-2  h-fit mr-10">
         <CardComponent icon={<HiOutlineUserGroup className="w-8 h-8 font-bold text-purple-500"></HiOutlineUserGroup>} title="Patients" statistic="600"></CardComponent>
         <CardComponent icon={<MdAttachMoney className="text-red-500 w-8 h-8 font-bold "></MdAttachMoney>} title="Income" statistic="12,500"></CardComponent>
         <CardComponent icon={<AiOutlineCalendar className="text-green-600 w-8 h-8 font-bold "></AiOutlineCalendar>} title="Appointments" statistic="211"></CardComponent>
-        <CardComponent icon={<RiHeartPulseLine className="text-red-500 w-8 h-8 font-bold "></RiHeartPulseLine>} title="Treatments" statistic="402"></CardComponent>
+        <CardComponent className="" icon={<RiHeartPulseLine className="text-red-500 w-8 h-8 font-bold  "></RiHeartPulseLine>} title="Treatments" statistic="402"></CardComponent>
       </div>
       {/* upcoming Appointments */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-3">
-        <div className="mr-3">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 mt-3">
+        <div className="mr-0">
           <span className="font-semibold text-slate-600 lg:text-sm ">Today's Appointments</span>
           <AppointmentListItem/>
         </div>
-        <div className="ml-1 mr-3 lg:mr-0">
+        <div className=" mr-3 lg:mr-0">
           <span className="font-semibold text-slate-600 lg:text-sm">Current Patient Details</span>
           <NextPatient/>
         </div>
       </div>
       {/* appointment requests  */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-3 ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 mt-3 ">
         <div>
           <div className="flex justify-between mr-3 ">
             <span className="font-semibold text-slate-600 lg:text-sm">Appointments Requests</span>
             <span className="font-semibold text-blue-400 cursor-pointer text-sm">See All</span>
           </div>
-          <div className=" h-full max-h-full bg-white overflow-x-hidden overflow-y-auto mainContent">
+          <div className=" h-full max-h-full bg-white mt-4 overflow-x-hidden overflow-y-auto mainContent">
             <AppointmentRequest/>
           </div>
         </div>
