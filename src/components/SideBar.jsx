@@ -12,7 +12,7 @@ function SideBar(){
   return(
     <div className="flex  flex-col shadow-xl bg-white divide-y divide-blue-100">
       {/* logo area  */}
-      <div className="flex items-center mt-2 hover:bg-blue-50">
+      <div className="flex items-center mt-2 ">
         <img src={Logo} alt="app-logo" className="w-10 App-logo"/>
         <div className="ml-2 hidden lg:block">
           <p className="font-bold">GenHealth</p>

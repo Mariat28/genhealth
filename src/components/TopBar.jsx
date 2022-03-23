@@ -14,35 +14,35 @@ function TopNav(props) {
 
   const location = useLocation();
 
-  function currentRoute(){
-    console.log('current route', location);
-    if(location.pathname === '/dashboard') {
-      setCurrentView(' Dashboard Overview');
-      setViewIcon(<GoThreeBars className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
-    } else if(location.pathname === '/calendar') {
-      setCurrentView(' Calendar View');
-      setViewIcon(<ImCalendar className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
-    } else if(location.pathname === '/patients') {
-      setCurrentView(' Patients');
-      setViewIcon(<FiUsers className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
-
-    } else if(location.pathname === '/messages') {
-      setCurrentView(' Inbox');
-      setViewIcon(<ImEnvelop className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
-
-    } else if(location.pathname === '/payments') {
-      setCurrentView('Payments');
-      setViewIcon(<HiOutlineCurrencyDollar className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
-
-    } else if(location.pathname === '/settings') {
-      setCurrentView('Settings');
-      setViewIcon(<RiListSettingsLine className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
-
-    }
-  }
   useEffect(()=>{
+    const currentRoute = () => {
+      console.log('current route', location);
+      if(location.pathname === '/dashboard') {
+        setCurrentView(' Dashboard Overview');
+        setViewIcon(<GoThreeBars className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
+      } else if(location.pathname === '/calendar') {
+        setCurrentView(' Calendar');
+        setViewIcon(<ImCalendar className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
+      } else if(location.pathname === '/patients') {
+        setCurrentView(' Patients');
+        setViewIcon(<FiUsers className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
+  
+      } else if(location.pathname === '/messages') {
+        setCurrentView(' Inbox');
+        setViewIcon(<ImEnvelop className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
+  
+      } else if(location.pathname === '/payments') {
+        setCurrentView('Payments');
+        setViewIcon(<HiOutlineCurrencyDollar className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
+  
+      } else if(location.pathname === '/settings') {
+        setCurrentView('Settings');
+        setViewIcon(<RiListSettingsLine className="h-5 w-5 mx-2 text-blue-900 hidden lg:block"/>);
+  
+      }
+    };
     currentRoute();
-  })
+  }, [location])
   return (
   <div className=" h-16 flex items-center justify-between bg-blue-50 shadow ">
     <div className=" md:flex items-center justify-between w-full lg:ml-20 ml-4  hidden">
