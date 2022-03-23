@@ -1,6 +1,6 @@
 function CardComponent(props) {
     return(
-        <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0  mr-4 md:mr-6 lg:mr-3">
+        <div className="rounded shadow bg-white h-36  flex justify-start mb-3 lg:mb-0   md:mr-6 lg:mr-0">
         <div className="flex justify-center  items-center ml-6">
           <div className=" flex justify-center items-center  bg-blue-50 p-2 h-10 w-10 rounded-lg" >
             {props.icon}

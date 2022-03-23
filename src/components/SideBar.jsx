@@ -5,11 +5,20 @@ import { RiListSettingsLine } from 'react-icons/ri'
 import { GoDashboard } from 'react-icons/go';
 import { IoIosInformationCircleOutline, IoIosArrowDown, IoMdLogOut} from 'react-icons/io';
 import { BiUserCircle} from 'react-icons/bi';
+import Logo from '../assets/health-insurance.png';
 
 
 function SideBar(){
   return(
-    <div className="lg:flex mt-14  flex-col shadow-xl">
+    <div className="flex  flex-col shadow-xl bg-white divide-y divide-blue-100">
+      {/* logo area  */}
+      <div className="flex items-center mt-2 hover:bg-blue-50">
+        <img src={Logo} alt="app-logo" className="w-10 App-logo"/>
+        <div className="ml-2 hidden lg:block">
+          <p className="font-bold">GenHealth</p>
+          <p className="font-thin text-xs font-serif text-gray-500">Simplifying e-Health</p>
+        </div>
+      </div>
       {/* sidenav NavLinks */}
       <div className="flex flex-col  shadow-2xl h-screen mt-4 justify-between">
         <div className="mt-  flex flex-col justify-between h-full">
@@ -23,7 +32,7 @@ function SideBar(){
               </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="calendar">
+                <NavLink to="calendar" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                     <HiOutlineCalendar className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm lg:block hidden">Calendar</p>
@@ -31,7 +40,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/patients">
+                <NavLink to="/patients" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                     <HiOutlineUser className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm lg:block hidden">Patient List</p>
@@ -39,7 +48,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/messages">
+                <NavLink to="/messages" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                   <HiOutlineChat className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm lg:block hidden">Messages</p>
@@ -47,7 +56,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/payments">
+                <NavLink to="/payments" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                   <HiOutlineCurrencyDollar className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm lg:block hidden">Payment Information</p>
@@ -55,7 +64,7 @@ function SideBar(){
                 </NavLink>
               </li>
               <li className="700 text-black pl-0 py-4 text-base">
-                <NavLink to="/settings">
+                <NavLink to="/settings" className={({ isActive }) => isActive ? " text-blue-900 font-bold bg-red-500 shadow-lg" : 'text-black'}>
                   <div className="flex items-center">
                   <RiListSettingsLine className='h-5 w-5 ml-2'/>
                     <p className="pl-4 text-sm lg:block hidden">Settings</p>

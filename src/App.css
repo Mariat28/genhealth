@@ -49,3 +49,6 @@
   padding:5px;
   border-radius:8px;
 }
+.fc .fc-button-primary{
+  background-color : 'green' !important;
+}
