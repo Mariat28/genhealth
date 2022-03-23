@@ -14,7 +14,7 @@ function DashboardContent() {
     <div className=" ml-4  w-full  mainContent">
       {/* metrics row  */}
       <div className="grid lg:grid-cols-4 grid-cols-1  h-fit mr-3">
-        <CardComponent icon={<HiOutlineUserGroup className="w-8 h-8 font-bold text-purple-500"></HiOutlineUserGroup>} title="Patients" statistic="600"></CardComponent>
+        <CardComponent icon={<HiOutlineUserGroup className="w-8 h-8 font-bold text-purple-500" color="red"></HiOutlineUserGroup>} title="Patients" statistic="600"></CardComponent>
         <CardComponent icon={<MdAttachMoney className="text-red-500 w-8 h-8 font-bold "></MdAttachMoney>} title="Income" statistic="12,500"></CardComponent>
         <CardComponent icon={<AiOutlineCalendar className="text-green-600 w-8 h-8 font-bold "></AiOutlineCalendar>} title="Appointments" statistic="211"></CardComponent>
         <CardComponent icon={<RiHeartPulseLine className="text-red-500 w-8 h-8 font-bold "></RiHeartPulseLine>} title="Treatments" statistic="402"></CardComponent>
