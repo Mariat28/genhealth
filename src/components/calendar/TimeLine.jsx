@@ -1,5 +1,4 @@
 import womanProfile from '../../assets/woman.jpg';
-import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai';
 
 function TimeLine () {
     return (
@@ -8,10 +7,6 @@ function TimeLine () {
                 <div className="text-lg  flex items-center gap-1">
                     Appointments Timeline
                     <div className='rounded-full  bg-blue-900 text-white p-2 h-6 w-6 flex items-center text-sm justify-center'>3</div>
-                </div>
-                <div className='flex'>
-                <AiFillCaretLeft className='h-6 w-6'/>
-                <AiFillCaretRight className='h-6 w-6'/>
                 </div>
             </div>
             <div className="p-0 lg:p-2 w-full flex flex-col gap-2">
