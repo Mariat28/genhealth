@@ -26,7 +26,7 @@ function FullCalendar (){
           {calendarViews}
         </div>
       </div>
-      <div>
+      <div className="h-full">
         <CalendarComponent selectedView={selectedView}></CalendarComponent>
       </div>
     </div>
