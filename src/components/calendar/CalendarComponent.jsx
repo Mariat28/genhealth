@@ -21,6 +21,7 @@ function CalendarView(props) {
   ]
   return(
     <Calendar
+    ref={props.calendarRef}
       height="1000px"
       scheduleView
       view = {props.selectedView}
