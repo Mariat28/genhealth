@@ -3,16 +3,23 @@ import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
 import CalendarComponent from './CalendarComponent'
 
 function FullCalendar (){
-  const [selectedView, setSelectedView] = useState('week');
-  const views = ['Today', 'Week', 'Month', 'Work Week'];
+  const [selectedView, setSelectedView] = useState('day');
+  const views = ['day', 'week', 'month', 'Work Week'];
   const calendarViews = views.map((view) => 
-  <button className= {`px-2 py-1  text-white ${selectedView === view ? 'bg-white' : 'bg-blue-900'}`} onClick={handleViewChange(view)} key={view}>{view}</button>
+  <button className= {`px-2 py-1 ${selectedView === view ? 'bg-blue-900 text-white' : 'bg-white text-blue-900'}`} value={view} onClick={handleViewChange} key={view}>{view}</button>
   )
-  function handleViewChange(v) {
-    // setSelectedView(v);
+  function handleViewChange(e) {
+    if(e.target.value=== 'day') {
+      setSelectedView('day');
+    }
+    else if(e.target.value === 'month'){
+      setSelectedView('month');
+    } else if(e.target.value === 'week') {
+      setSelectedView('week');
+    }
   }
   return (
-    <div className="h-full">
+    <div className="h-full min-h-full">
     {/* header  */}
       <div className="flex justify-between mb-4 items-center">
         <div className="flex gap-2">
@@ -26,7 +33,7 @@ function FullCalendar (){
           {calendarViews}
         </div>
       </div>
-      <div className="h-full">
+      <div className=' h-fit min-h-fit  shadow'>
         <CalendarComponent selectedView={selectedView}></CalendarComponent>
       </div>
     </div>

@@ -19,10 +19,10 @@ function CalendarView() {
       <div className="flex  justify-end text-blue-900 cursor-pointer hover:animate-pulse">
         <BiCollapse className='h-6 w-6' onClick={handleTimeLineDisplay} />
       </div>
-      <div className="  p-2 lg:p-0 w-full grid xl:grid-cols-5 h-screen grid-rows-2 gap-2">
-        <div className={` xl:h-screen shadow-lg h-full  min-h-full max-h-full xl:max-h-screen overflow-y-auto xl:overflow-hidden border-b p-2  mainContent
+      <div className="  p-2 lg:p-0 w-full grid xl:grid-cols-5 h-full grid-rows-2 gap-2">
+        <div className={` xl:h-screen shadow-lg h-full   min-h-full max-h-full xl:max-h-screen  overflow-y-auto xl:overflow-hidden border-b p-2  mainContent
     ${!isTimeLine ? "col-span-5" : "xl:col-span-3  row-span-1"}`}>
-          <div className=" h-full mb-0">
+          <div className=" h-full">
             <FullCalendar/>
           </div>
         </div>
