@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
+import moment from 'moment';
 import CalendarComponent from './CalendarComponent'
 
 function FullCalendar (){
-  let calendarRef = useRef(null);
-  // const calendarInstance = calendarRef.current.getInstance();
+  const calendarRef = useRef(null);
   const [selectedView, setSelectedView] = useState('day');
+  const [controller, setController] = useState(1);
   const views = ['day', 'week', 'month'];
   const calendarViews = views.map((view) => 
   <button className= {`px-2 py-1 ${selectedView === view ? 'bg-blue-900 text-white' : 'bg-white text-blue-900'}`} value={view} onClick={handleViewChange} key={view}>{view}</button>
@@ -23,7 +24,10 @@ function FullCalendar (){
     }
   }
   function handleNavButtons(e){
+    const counter = new Date().getTime();
+    setController(counter);
   const calendarInstance = calendarRef.current.getInstance();
+    console.log('calendarInstance 1', calendarInstance);
     if(e.target.value === 'next'){
       calendarInstance.next();
       console.log(calendarInstance.getDateRangeStart(), calendarInstance.getDateRangeEnd());
@@ -31,12 +35,19 @@ function FullCalendar (){
       calendarInstance.prev();
     }
   }
-  // useEffect(()=>{
-  //   const  handleTitleDisplay = ()=>{
-  //       // setTitleStart(calendarInstance.getDateRangeStart())
-  //   }
-  //   handleTitleDisplay();
-  // }, [selectedView])
+  useEffect(()=>{
+    const  handleTitleDisplay = ()=>{
+      const calendarInstance2 = calendarRef.current.getInstance();
+      const startTime = calendarInstance2.getDateRangeStart()._date.toLocaleString();
+      const endTime = calendarInstance2.getDateRangeEnd()._date.toLocaleString();
+      selectedView === 'month' ? setTitleStart(moment(startTime).format('MMM YYYY')) : setTitleStart(moment(startTime).format('MMM D, YYYY'));
+      if(selectedView === 'week'){
+        setTitleStart(moment(startTime).format('MMM D'))
+      }
+        setTitleEnd(moment(endTime).format('MMM D, YYYY'));
+    }
+    handleTitleDisplay();
+  }, [selectedView, controller])
   return (
     <div className="h-full min-h-full">
     {/* header  */}
@@ -46,7 +57,7 @@ function FullCalendar (){
           <button className="bg-blue-900 p-2 text-white" value="next" onClick={handleNavButtons}><IoIosArrowForward className="font-bold" /></button>
         </div>
         <div className="text-3xl text-blue-900 flex">
-          <span>{calendarTitleStart}</span><span>-{calendarTitleEnd}</span>
+          <span>{calendarTitleStart}</span>{selectedView === 'week' ? <span>-{calendarTitleEnd}</span> : ''}
         </div>
         <div className="flex gap-0 shadow">
           {calendarViews}

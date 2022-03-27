@@ -9,19 +9,40 @@ function CalendarView(props) {
     hourEnd: 19
 
   };
+  const calendars =[{
+    id: '0',
+    name: 'Surgery Department',
+    bgColor: '#f5f5f5',
+    borderColor: '#f5f5f5',
+  }]
+  // const template = {
+  //   milestone(schedule) {
+  //     return `<span>${
+  //             schedule.title
+  //     }</span>`;
+  //   },
+  //   milestoneTitle() {
+  //     return 'Milestone';
+  //   },
+  //   allday(schedule) {
+  //     return `${schedule.title}<i class="fa fa-refresh"></i>`;
+  //   },
+  //   alldayTitle() {
+  //     return 'All Day';
+  //   }
+  // };
   const schedules =[
     {
       id: '1',
       calendarId: '0',
       title : 'Study for test',
-      start : '2022-03-26T09:00:00.000Z',
-      end : '2022-03-26T09:30:00.000Z',
+      start : '2022-03-27T09:00:00.000Z',
+      end : '2022-03-27T09:30:00.000Z',
       categoty: 'time',
     }
   ]
   return(
     <Calendar
-    ref={props.calendarRef}
       height="1000px"
       scheduleView
       view = {props.selectedView}
@@ -35,7 +56,10 @@ function CalendarView(props) {
       month={{
         startDayOfWeek: 0
       }}
+      calendars={calendars}
       schedules={schedules}
+      // template={template}
+      ref ={props.calendarRef}
       
     />
   )

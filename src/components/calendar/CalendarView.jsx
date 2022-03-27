@@ -5,7 +5,7 @@ import TimeLine from "./TimeLine";
 import {BiCollapse} from 'react-icons/bi';
 
 function CalendarView() {
-  const [isTimeLine, setIsTimeLine] = useState(false);
+  const [isTimeLine, setIsTimeLine] = useState(true);
   function handleTimeLineDisplay() {
     setIsTimeLine(!isTimeLine);
     if(isTimeLine) {
@@ -21,7 +21,7 @@ function CalendarView() {
       </div>
       <div className="  p-2 lg:p-0 w-full grid xl:grid-cols-5 h-full grid-rows-2 gap-2">
         <div className={` xl:h-screen shadow-lg h-full   min-h-full max-h-full xl:max-h-screen  overflow-y-auto xl:overflow-hidden border-b p-2  mainContent
-    ${!isTimeLine ? "col-span-5" : "xl:col-span-3  row-span-1"}`}>
+    ${!isTimeLine ? "col-span-5 row-span-2" : "xl:col-span-3  row-span-1"}`}>
           <div className=" h-full">
             <FullCalendar/>
           </div>
