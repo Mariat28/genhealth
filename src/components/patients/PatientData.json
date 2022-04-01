@@ -1,0 +1,28 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Ndagire Mariat",
+      "age": 24,
+      "emailAddress": "mariatndagire@gmail.com",
+      "address": "Kampala, Uganda",
+      "phone": "0705976941"
+    },
+    {
+      "id": 2,
+      "name": "Rania bint Mariat",
+      "age": 24,
+      "emailAddress": "mariatndagire@gmail.com",
+      "address": "Kampala, Uganda",
+      "phone": "0705976941"
+    },
+    {
+      "id": 3,
+      "name": "Ryan Ibn Mariat",
+      "age": 24,
+      "emailAddress": "mariatndagire@gmail.com",
+      "address": "Kampala, Uganda",
+      "phone": "0705976941"
+    }
+  ]
+}

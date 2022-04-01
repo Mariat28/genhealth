@@ -6,7 +6,7 @@ import App from './App';
 import LoginPage from './components/LoginPage';
 import DashboardContent from "./components/dashboard/Dashboard";
 import Calendar from "./components/calendar/CalendarView";
-import PatientList from "./components/PatientList";
+import PatientList from "./components/patients/PatientList";
   const rootElement = document.getElementById('root');
   render(
     <Router>
