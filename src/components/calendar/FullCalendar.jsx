@@ -5,11 +5,11 @@ import CalendarComponent from './CalendarComponent'
 
 function FullCalendar (){
   const calendarRef = useRef(null);
-  const [selectedView, setSelectedView] = useState('day');
-  const [controller, setController] = useState(1);
-  const views = ['day', 'week', 'month'];
+  const [selectedView, setSelectedView] = useState('week');
+  const [controller, setController] = useState(0);
+  const views = ['week', 'month', 'day'];
   const calendarViews = views.map((view) => 
-  <button className= {`px-2 py-1 ${selectedView === view ? 'bg-blue-900 text-white' : 'bg-white text-blue-900'}`} value={view} onClick={handleViewChange} key={view}>{view}</button>
+  <button className= {`p-3 ${selectedView === view ? 'bg-blue-900 text-white' : 'bg-white text-blue-900'}`} value={view} onClick={handleViewChange} key={view}>{view}</button>
   )
   const [calendarTitleStart, setTitleStart] = useState('');
   const [calendarTitleEnd, setTitleEnd] = useState('');
@@ -24,15 +24,17 @@ function FullCalendar (){
     }
   }
   function handleNavButtons(e){
-    const counter = new Date().getTime();
-    setController(counter);
-  const calendarInstance = calendarRef.current.getInstance();
-    console.log('calendarInstance 1', calendarInstance);
+    let counter = new Date().getTime();
+    const calendarInstance = calendarRef.current.getInstance();
+    console.log('calendarInstance 1', calendarInstance, e.target);
     if(e.target.value === 'next'){
+      console.log(calendarRef.current);
       calendarInstance.next();
-      console.log(calendarInstance.getDateRangeStart(), calendarInstance.getDateRangeEnd());
+      setController(counter+=1);
+      // console.log(calendarInstance.getDateRangeStart(), calendarInstance.getDateRangeEnd());
     } else if(e.target.value === 'prev'){ 
       calendarInstance.prev();
+      setController(counter+=1);
     }
   }
   useEffect(()=>{
@@ -40,11 +42,13 @@ function FullCalendar (){
       const calendarInstance2 = calendarRef.current.getInstance();
       const startTime = calendarInstance2.getDateRangeStart()._date.toLocaleString();
       const endTime = calendarInstance2.getDateRangeEnd()._date.toLocaleString();
-      selectedView === 'month' ? setTitleStart(moment(startTime).format('MMM YYYY')) : setTitleStart(moment(startTime).format('MMM D, YYYY'));
+      selectedView === 'month' ? setTitleStart(moment(startTime).format('MMMM YYYY')) : setTitleStart(moment(startTime).format('MMM D, YYYY'));
       if(selectedView === 'week'){
-        setTitleStart(moment(startTime).format('MMM D'))
-      }
+        setTitleStart(moment(startTime).format('MMM D'));
+        setTitleEnd(moment(endTime).format('D, YYYY'));
+      } else{
         setTitleEnd(moment(endTime).format('MMM D, YYYY'));
+      }
     }
     handleTitleDisplay();
   }, [selectedView, controller])
@@ -53,10 +57,10 @@ function FullCalendar (){
     {/* header  */}
       <div className="flex justify-between mb-4 items-center">
         <div className="flex gap-2">
-          <button className="bg-blue-900 p-2 text-white" value="prev" onClick={handleNavButtons}><IoIosArrowBack className="font-bold" /></button>
-          <button className="bg-blue-900 p-2 text-white" value="next" onClick={handleNavButtons}><IoIosArrowForward className="font-bold" /></button>
+          <button className="bg-blue-900 p-3 text-white" value="prev" onClick={handleNavButtons}><IoIosArrowBack className="font-bold" /></button>
+          <button className="bg-blue-900 p-3 text-white" value="next" onClick={handleNavButtons}><IoIosArrowForward className="font-bold" /></button>
         </div>
-        <div className="text-3xl text-blue-900 flex">
+        <div className="text-3xl text-blue-900 flex font-semibold">
           <span>{calendarTitleStart}</span>{selectedView === 'week' ? <span>-{calendarTitleEnd}</span> : ''}
         </div>
         <div className="flex gap-0 shadow">
