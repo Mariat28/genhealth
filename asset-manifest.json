@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/genhealth/static/css/main.8e61fd69.css",
-    "main.js": "/genhealth/static/js/main.262aa2e3.js",
+    "main.css": "/genhealth/static/css/main.17c0b971.css",
+    "main.js": "/genhealth/static/js/main.68996cbe.js",
     "static/media/woman.jpg": "/genhealth/static/media/woman.990bf8344d8845fea242.jpg",
     "static/media/man.jpg": "/genhealth/static/media/man.a7d9a58ef55ff8769710.jpg",
     "static/media/login_image.svg": "/genhealth/static/media/login_image.2eeab4fba5a749aa5d6deffb229187dd.svg",
     "static/media/health-insurance.png": "/genhealth/static/media/health-insurance.6ff921d5f9f9f1629607.png",
     "index.html": "/genhealth/index.html",
-    "main.8e61fd69.css.map": "/genhealth/static/css/main.8e61fd69.css.map",
-    "main.262aa2e3.js.map": "/genhealth/static/js/main.262aa2e3.js.map"
+    "main.17c0b971.css.map": "/genhealth/static/css/main.17c0b971.css.map",
+    "main.68996cbe.js.map": "/genhealth/static/js/main.68996cbe.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e61fd69.css",
-    "static/js/main.262aa2e3.js"
+    "static/css/main.17c0b971.css",
+    "static/js/main.68996cbe.js"
   ]
 }
