@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import LoginPage from './components/LoginPage';
-import DashboardContent from "./components/dashboard/Dashboard";
+import DashboardContent from "./components/Dashboard/Dashboard";
 import Calendar from "./components/calendar/CalendarView";
 import PatientList from "./components/patients/PatientList";
   const rootElement = document.getElementById('root');

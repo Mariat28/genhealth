@@ -2,7 +2,7 @@ import Calendar from '@toast-ui/react-calendar';
 import "tui-calendar/dist/tui-calendar.css";
 import 'tui-date-picker/dist/tui-date-picker.css';
 import 'tui-time-picker/dist/tui-time-picker.css';
-import moment from 'moment';
+// import moment from 'moment';
 import {useCallback} from 'react';
 
 function CalendarView(props) {

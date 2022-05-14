@@ -42,12 +42,12 @@ function FullCalendar (){
       const calendarInstance2 = calendarRef.current.getInstance();
       const startTime = calendarInstance2.getDateRangeStart()._date.toLocaleString();
       const endTime = calendarInstance2.getDateRangeEnd()._date.toLocaleString();
-      selectedView === 'month' ? setTitleStart(moment(startTime).format('MMMM YYYY')) : setTitleStart(moment(startTime).format('MMM D, YYYY'));
+      selectedView === 'month' ? setTitleStart(moment(startTime, 'DD/MM/YYYY, HH:mm:ss').format('MMMM YYYY').toUpperCase()) : setTitleStart(moment(startTime, 'DD/MM/YYYY, HH:mm:ss').format('MMM D, YYYY').toUpperCase());
       if(selectedView === 'week'){
-        setTitleStart(moment(startTime).format('MMM D'));
-        setTitleEnd(moment(endTime).format('D, YYYY'));
+        setTitleStart(moment(startTime, 'DD/MM/YYYY, HH:mm:ss').format('MMM D').toUpperCase());
+        setTitleEnd(moment(endTime, 'DD/MM/YYYY, HH:mm:ss').format('D, YYYY'));
       } else{
-        setTitleEnd(moment(endTime).format('MMM D, YYYY'));
+        setTitleEnd(moment(endTime, 'DD/MM/YYYY, HH:mm:ss').format('MMM D, YYYY'));
       }
     }
     handleTitleDisplay();
@@ -67,7 +67,7 @@ function FullCalendar (){
           {calendarViews}
         </div>
       </div>
-      <div className=' h-fit min-h-fit  shadow'>
+      <div className=' min-h-full   shadow'>
         <CalendarComponent selectedView={selectedView} calendarRef={calendarRef}></CalendarComponent>
       </div>
     </div>
