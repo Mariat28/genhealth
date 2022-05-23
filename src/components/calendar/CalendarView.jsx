@@ -1,5 +1,6 @@
 import React from "react";
 import FullCalendar from "./FullCalendar";
+import addAppointment from './AddAppointmentForm';
 import { useState } from "react";
 import TimeLine from "./TimeLine";
 import {BiCollapse} from 'react-icons/bi';
@@ -29,6 +30,9 @@ function CalendarView() {
         </div>
         <div className={`p-1  ${!isTimeLine ? '' : 'xl:col-span-2 p-1 row-span-1 h-full xl:h-screen'}`}>
           {isTimeLine ? <TimeLine /> : ''}
+        </div>
+        <div>
+          <addAppointment></addAppointment>
         </div>
       </div>
       </>

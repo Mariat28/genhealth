@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
 import moment from 'moment';
-import CalendarComponent from './CalendarComponent'
+import CalendarComponent from './CalendarComponent';
 
 function FullCalendar (){
   const calendarRef = useRef(null);
