@@ -1,9 +1,10 @@
+import React from 'react';
 import {AiOutlineCheck, AiOutlineClose} from 'react-icons/ai';
 import profileImg from '../../assets/man.jpg';
 import womanProfile from '../../assets/woman.jpg';
 function AppointmentRequest() {
     return(
-        <div>
+        <React.Fragment>
             <div className=" p-2  max-h-full overflow-x-hidden  min-h-full  overflow-auto lg:mr-0 ">
                 <div className="flex justify-between items-center mt-3 w-full p-3 rounded mr-3 shadow-sm cursor-pointer hover:shadow-md">
                     <div className="flex items-start">
@@ -47,7 +48,7 @@ function AppointmentRequest() {
                     </div>
                 </div>
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 export default AppointmentRequest;

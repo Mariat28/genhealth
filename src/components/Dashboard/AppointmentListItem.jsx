@@ -1,9 +1,10 @@
+import React from 'react';
 import profileImg from '../../assets/man.jpg';
 import womanProfile from '../../assets/woman.jpg';
 
 function AppointmentListItem() {
     return(
-        <>
+        <React.Fragment>
         <div className="bg-white p-2 mt-3 max-h-full  min-h-[400px] overflow-auto lg:mr-0 mr-6">
             <div className="flex justify-between mt-3 bg-blue-50 p-3 rounded mr-3 shadow-sm cursor-pointer hover:shadow">
                 <div className="flex">
@@ -36,7 +37,7 @@ function AppointmentListItem() {
                     </div>
             </div>
         </div>
-        </>
+        </React.Fragment>
     )
 }
 export default AppointmentListItem;
