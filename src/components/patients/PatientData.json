@@ -2,7 +2,8 @@
   "patients": [
     {
       "id": 1,
-      "name": "Ndagire Mariat",
+      "name": "Ndagire",
+      "last_name": "Mariat",
       "age": 24,
       "emailAddress": "mariatndagire@gmail.com",
       "address": "Kampala, Uganda",
@@ -10,7 +11,8 @@
     },
     {
       "id": 2,
-      "name": "Rania bint Mariat",
+      "name": "Rania",
+      "last_name": "bint Mariat",
       "age": 24,
       "emailAddress": "mariatndagire@gmail.com",
       "address": "Kampala, Uganda",
@@ -18,7 +20,8 @@
     },
     {
       "id": 3,
-      "name": "Ryan Ibn Mariat",
+      "name": "Ryan",
+      "last_name": "Ibn Mariat",
       "age": 24,
       "emailAddress": "mariatndagire@gmail.com",
       "address": "Kampala, Uganda",

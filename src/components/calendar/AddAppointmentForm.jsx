@@ -1,4 +1,4 @@
-function addAppointment() {
+function AddAppointment() {
   return(
     <div>
       addForm
@@ -15,4 +15,4 @@ function addAppointment() {
     </div>
   )
 }
-export default addAppointment;
+export default AddAppointment;

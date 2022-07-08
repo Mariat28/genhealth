@@ -1,7 +1,7 @@
 import {BsFillSuitHeartFill} from 'react-icons/bs';
-function Footer() {
+const Footer = () => {
   return(
-    <div className="flex justify-end text-base items-center p-2">
+    <div className="flex justify-center shadow-md w-full absolute bottom-0 mr-6 text-base items-center p-2">
       <span>Hand-crafted and Made with</span>
       <BsFillSuitHeartFill className='text-red-700 ml-1'/>
       <span className='mr-1 ml-1'>by</span>

@@ -33,6 +33,9 @@
     transform: rotate(360deg);
   }
 }
+.parent-container{
+  height: calc(100vh - 120px);
+}
 .dashboardWelcomeCard{
   background-color: #23305d;
 }

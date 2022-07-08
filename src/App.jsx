@@ -14,12 +14,10 @@ function App() {
           <div className="w-full fixed top-0 ">
             <TopNavigation name="mariat" className="fixed top-0 "/>
           </div>
-          <div className='lg:ml-60 md:ml-12 w-full overflow-auto overflow-x-hidden mt-20 mainContent relative'>
+          <div className='lg:ml-60 md:ml-12 w-full overflow-auto overflow-x-hidden mt-20 mainContent relative parent-container'>
             <Outlet/>
-            <div className='relative h-20 items-end flex justify-center bg-blue-50  '>
-            <Footer className="absolute bottom-0 mr-6 "/>
-              </div>
           </div>
+          <Footer/>
       </div>
   );
 }
